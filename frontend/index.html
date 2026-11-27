@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Vehicle Packet Tracker</title>
+    <style>
+        body {font-family: Arial, sans-serif; margin: 20px;}
+        .form-group {margin-bottom: 10px;}
+        label {display: block; margin-bottom: 4px;}
+        input, button {padding: 8px; width: 100%;}
+        #stats {margin-top: 20px;}
+        table {border-collapse: collapse; width: 100%;}
+        th, td {border: 1px solid #ccc; padding: 8px; text-align: left;}
+    </style>
+</head>
+<body>
+    <h1>Enter Vehicle Packet Data</h1>
+    <form id='entryForm'>
+        <div class='form-group'>
+            <label for='vehicle_id'>Vehicle ID:</label>
+            <input type='text' id='vehicle_id' required>
+        </div>
+        <div class='form-group'>
+            <label for='entry_date'>Date (optional):</label>
+            <input type='date' id='entry_date' value='' max=''>
+        </div>
+        <div class='form-group'>
+            <label for='packet_count'>Packets (optional):</label>
+            <input type='number' id='packet_count' min='0'>
+        </div>
+        <div class='form-group'>
+            <label for='photo'>Photo (optional):</label>
+            <input type='file' id='photo' accept='image/*'>
+        </div>
+        <button type='submit'>Submit</button>
+    </form>
+
+    <h2>Statistics</h2>
+    <div id='stats'></div>
+
+    <script src='script.js'></script>
+</body>
+</html>
